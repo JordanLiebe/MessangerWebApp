@@ -1,0 +1,31 @@
+﻿@page
+@model MessangerWebApp.MessangerModel
+@{
+    ViewData["Title"] = "Messanger";
+}
+
+<script>
+    function loadlink() {
+        $('#MessageBox').load('Messages');
+    }
+
+    loadlink(); // This will run on page load
+</script>
+<script>
+    setInterval(function(){
+        loadlink() // this will run after every 5 seconds
+    }, 5000);
+</script>
+
+<h1>Messanger</h1>
+
+User: @Model.usrName
+
+<div id="MessageBox">
+
+</div>
+
+<form method="post">
+    <input name="message" />
+    <button>Send</button>
+</form>
