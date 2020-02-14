@@ -320,3 +320,4 @@ C:\Source\MessangerWebApp\MessangerWebApp\obj\Debug\netcoreapp3.1\MessangerWebAp
 C:\Source\MessangerWebApp\MessangerWebApp\obj\Debug\netcoreapp3.1\MessangerWebApp.dll
 C:\Source\MessangerWebApp\MessangerWebApp\obj\Debug\netcoreapp3.1\MessangerWebApp.pdb
 C:\Source\MessangerWebApp\MessangerWebApp\obj\Debug\netcoreapp3.1\MessangerWebApp.csprojAssemblyReference.cache
+C:\Source\MessangerWebApp\MessangerWebApp\obj\Debug\netcoreapp3.1\MessangerWebApp.MvcApplicationPartsAssemblyInfo.cache
