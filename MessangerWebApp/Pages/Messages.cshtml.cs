@@ -20,6 +20,7 @@ namespace MessangerWebApp
         public async Task OnGet()
         {
             Messages = await _context.Message.ToListAsync();
+            Messages.Reverse();
         }
     }
 }

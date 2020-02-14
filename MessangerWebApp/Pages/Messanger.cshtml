@@ -4,26 +4,36 @@
     ViewData["Title"] = "Messanger";
 }
 
-<script>
+<script type="text/javascript">
+    var source = new EventSource('Events/Msg');
+
     function loadlink() {
         $('#MessageBox').load('Messages');
     }
 
-    loadlink(); // This will run on page load
-</script>
-<script>
-    setInterval(function(){
-        loadlink() // this will run after every 5 seconds
-    }, 5000);
+    source.onmessage = function (event) {
+        loadlink();
+        console.log('Message: ' + event.data);
+    };
+
+    source.onopen = function(event) {
+        loadlink();
+        $('#SessionStatus').html("<strong>Status:</strong> Good");
+    };
+
+    source.onerror = function(event) {
+        $('#SessionStatus').html("<strong>Status:</strong> Error");
+    }
 </script>
 
 <h1>Messanger</h1>
 
-User: @Model.usrName
-
-<div id="MessageBox">
-
+<div id="SessionInfo" style="display: flex;">
+    <div id="SessionUser" style="padding: 2px;"><strong>User:</strong> @Model.usrName</div>
+    <div id="SessionStatus" style="padding: 2px;"><strong>Status:</strong> Connecting...</div>
 </div>
+
+<div id="MessageBox"></div>
 
 <form method="post">
     <input name="message" />

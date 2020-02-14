@@ -2,11 +2,16 @@
 @model MessangerWebApp.MessagesModel
 @{
     Layout = null;
+    int end;
+    if (Model.Messages.Count < 10)
+        end = 0;
+    else
+        end = Model.Messages.Count - 10;
 }
-@foreach (Models.Message message in Model.Messages)
+@for(int i = Model.Messages.Count - end; i > 0; i--)
 {
     <div class="Message" style="display: flex;">
-        <div class="MessageContent" style="padding: 5px;">@message.Content</div>
-        <div class="MessageAuthor" style="padding: 5px;">@message.Author</div>
+        <div class="MessageContent" style="padding: 5px;">@Model.Messages[i - 1].Content</div>
+        <div class="MessageAuthor" style="padding: 5px;">-@Model.Messages[i - 1].Author</div>
     </div>
 }

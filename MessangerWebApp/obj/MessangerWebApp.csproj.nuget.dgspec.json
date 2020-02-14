@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JordanMLiebe\\source\\repos\\MessangerWebApp\\MessangerWebApp\\MessangerWebApp.csproj": {}
+    "C:\\Source\\MessangerWebApp\\MessangerWebApp\\MessangerWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JordanMLiebe\\source\\repos\\MessangerWebApp\\MessangerWebApp\\MessangerWebApp.csproj": {
+    "C:\\Source\\MessangerWebApp\\MessangerWebApp\\MessangerWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JordanMLiebe\\source\\repos\\MessangerWebApp\\MessangerWebApp\\MessangerWebApp.csproj",
+        "projectUniqueName": "C:\\Source\\MessangerWebApp\\MessangerWebApp\\MessangerWebApp.csproj",
         "projectName": "MessangerWebApp",
-        "projectPath": "C:\\Users\\JordanMLiebe\\source\\repos\\MessangerWebApp\\MessangerWebApp\\MessangerWebApp.csproj",
+        "projectPath": "C:\\Source\\MessangerWebApp\\MessangerWebApp\\MessangerWebApp.csproj",
         "packagesPath": "C:\\Users\\JordanMLiebe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JordanMLiebe\\source\\repos\\MessangerWebApp\\MessangerWebApp\\obj\\",
+        "outputPath": "C:\\Source\\MessangerWebApp\\MessangerWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JordanMLiebe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "FirebaseDatabase.net": {
+              "target": "Package",
+              "version": "[4.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.1, )"
